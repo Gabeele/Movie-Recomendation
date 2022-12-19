@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  server:
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+    ports: 
+      - 5001:80
+
+  web:
+    build: ./frontend
+    volumes:
+      - ./frontend:/user/src/app
+    ports:
+      - 5002:3000
+    depends_on:
+        - server
