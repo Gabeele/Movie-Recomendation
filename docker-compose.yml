@@ -1,17 +1,20 @@
-version: '3.9'
+version: '3'
+
 services:
-  server:
+  flask_app:
     build: ./backend
     volumes:
-      - ./backend:/usr/src/app
+      - ./backend:/user/src/app
+    restart: always
     ports: 
-      - 5001:80
+      - 80:5000
+    container_name: flask_app
 
   web:
     build: ./frontend
     volumes:
       - ./frontend:/user/src/app
     ports:
-      - 5002:3000
+      - 3000:3000
     depends_on:
-        - server
+        - flask_app
