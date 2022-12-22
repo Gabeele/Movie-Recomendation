@@ -2,6 +2,14 @@ import "./App.css";
 import { useState, useEffect, useLayoutEffect } from "react";
 
 function App() {
+  return (
+    <div className="App">
+      <SearchPage />
+    </div>
+  );
+}
+
+function GetMovies(){
   const [data, setData] = useState(null);
 
   useEffect(() => {
