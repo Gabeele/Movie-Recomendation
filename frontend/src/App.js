@@ -1,31 +1,24 @@
-import "./App.css";
-import { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState } from "react";
+import MovieList from "./MovieList";
+import Search from "./Search"
+import Header from "./Header"
 
 function App() {
-  const [data, setData] = useState(null);
+  const [movieList, setMovieList] = useState()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(`http://localhost/movies`);
-      const newData = await response.json();
-      setData(newData);
-    };
-    fetchData();
-  }, []);
+  function setParentValue(value) {
+    setMovieList(value)
+
+  }
 
   return (
-		<div className="App">
-			<header className="App-header">
-				<p>React with Flask API on Docker</p>
-        <ul>
-        {data && data.movies.map(movie =>{
-            <li>{movie.title} <a>{movie.url}</a></li>
-          })
-        }
-        </ul>
-			</header>
-		</div>
-	);
+    <div className="container">
+      <Header />
+      <Search setValue={setParentValue} />
+      <div className="movies">
+        <MovieList movieList={movieList} /></div>
+    </div>
+  );
 }
 
 export default App;
