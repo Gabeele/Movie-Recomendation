@@ -3,13 +3,9 @@ import MovieList from "./MovieList";
 import Search from "./Search"
 
 function App() {
-  const [movieList, setMovieList] = useState(
-    { "movies": [{ "image": "http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "title": "Garfield", "url": "https://www.imdb.com/title/tt0356634/" }] }
-
-  )
+  const [movieList, setMovieList] = useState()
 
   function setParentValue(value) {
-    console.log(movieList)
     setMovieList(value)
 
   }
