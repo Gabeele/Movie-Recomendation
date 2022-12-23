@@ -1,0 +1,105 @@
+
+
+
+:root{
+    --background: #010918;
+    --foreground: #010f2c; 
+    --light-font: rgb(255, 242, 215);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #010918;
+    color: var(--light-font);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a, a:hover, a:focus{
+    text-decoration: none;
+    color: var(--light-font);
+    border: 0;
+    outline: none;
+}
+
+
+.header{
+    font-size: x-large;
+    width: auto;
+    vertical-align: middle;
+    margin: 1%;
+}
+
+.search{
+    width: auto;
+    margin: 1%;
+    vertical-align: middle;
+
+}
+
+.search input{
+    font-size: x-large;
+    color: var(--light-font);
+    background-color: var(--foreground);
+    width: 25%;
+    padding: 6px;
+    border: none;
+    transition: 0.2s;
+
+}
+
+.search input:focus{
+    outline: none;
+    transition: 0.2s;
+    box-shadow: rgba(103, 103, 113, 0.37) 0px 7px 29px 0px;} 
+
+.search button{
+    font-size: x-large;
+    color: var(--light-font);
+    background-color: var(--foreground);
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.movies{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.movie-card{
+    margin:2% 0;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--foreground) ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.movie-card:hover{
+    scale: 1.05;
+    transition: ease-in-out 0.2s;
+}
+
+
+.movie-card img{
+    margin: px;
+    border: black 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.title{
+    font-size: xx-large;
+    padding: 0;
+    margin: 15px;
+}
+
+.details {
+    text-align: left;
+    padding: 0 10px;
+    margin: 0;
+    font-size: medium;
+}

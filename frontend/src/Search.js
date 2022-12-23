@@ -16,10 +16,10 @@ export default function Search({setValue}) {
     }
 
     return (
-        <>
-        <input ref={searchRef} type="text" placeholder="Enter in a movie"></input>
-        <button onClick={getMovies}>Search</button>
-        </>
+        <div className="search">
+        <input ref={searchRef} type="text" placeholder="Enter in a movie..."></input>
+        <button onClick={getMovies}><i className="fa fa-search"></i></button>
+        </div>
     )
 
 

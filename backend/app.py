@@ -5,8 +5,10 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config["CORS_HEADERS"] = "content-Type"
 movies = [
-    {"title":"Garfield", "url":"https://www.imdb.com/title/tt0356634/", "image":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg"}, 
-    {"title":"The Hulk", "url":"https://www.imdb.com/title/tt0286716/", "image":"http://image.tmdb.org/t/p/w500//gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg"}
+    {"title":"Garfield", "url":"https://www.imdb.com/title/tt0356634/", "poster_path":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "release_date":"1998-12-01", "vote_average":15.25, "vote_count":251, "popularity":100}, 
+    {"title":"The Hulk", "url":"https://www.imdb.com/title/tt0286716/",  "poster_path":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "release_date":"1998-12-01", "vote_average":15.25, "vote_count":251, "popularity":100}, 
+    {"title":"Garfield", "url":"https://www.imdb.com/title/tt0356634/",  "poster_path":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "release_date":"1998-12-01", "vote_average":15.25, "vote_count":251, "popularity":100}, 
+    {"title":"The Hulk", "url":"https://www.imdb.com/title/tt0286716/",  "poster_path":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "release_date":"1998-12-01", "vote_average":15.25, "vote_count":251, "popularity":100}
   ]
 @app.route("/")
 def home():
