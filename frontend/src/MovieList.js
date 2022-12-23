@@ -3,7 +3,7 @@ import Movie from "./Movie"
 
 export default function MovieList({movieList}) {
     return (
-        movieList.map(movie => {
+        movieList.movies.map(movie => {
             return <Movie key={movie.title} movie={movie} />
         })
     )

@@ -1,18 +1,24 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MovieList from "./MovieList";
 import Search from "./Search"
 
 function App() {
-  const [movieList, setMovieList] = useState([
-    {"title":"Garfield", "url":"https://www.imdb.com/title/tt0356634/", "image":"http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg"}, 
-    {"title":"The Hulk", "url":"https://www.imdb.com/title/tt0286716/", "image":"http://image.tmdb.org/t/p/w500//gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg"}
-  ])
- 
+  const [movieList, setMovieList] = useState(
+    { "movies": [{ "image": "http://image.tmdb.org/t/p/w500//OxMkPvxxroH5TBTaeXxEEDwxOl.jpg", "title": "Garfield", "url": "https://www.imdb.com/title/tt0356634/" }] }
+
+  )
+
+  function setParentValue(value) {
+    console.log(movieList)
+    setMovieList(value)
+
+  }
+
   return (
     <>
-      <Search movieList={movieList}/>
+      <Search setValue={setParentValue} />
       <h1>Recommended</h1>
-      <MovieList movieList={movieList}/>
+      <MovieList movieList={movieList} />
 
     </>
   );
