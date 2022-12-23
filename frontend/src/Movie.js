@@ -4,7 +4,7 @@ export default function Movie({movie}) {
     return (
         <>
             <h4>{movie.title}</h4>
-            <a href={movie.url}>Details</a>
+            <a href={movie.url} target="_blank">Details</a>
             <img alt={movie.title} src={movie.image}></img>
         </>
     )
