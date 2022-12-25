@@ -1,5 +1,6 @@
 import pickle
 import requests
+import config
 from sklearn.metrics.pairwise import cosine_similarity
 
 df1 = pickle.load(open('./data/movie_list.pkl', 'rb'))
@@ -13,7 +14,7 @@ def get_recommendation(title):
         # get the title via imdb search
         # Use that instead
         try:
-            result = requests.get("https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query="+title)
+            result = requests.get("https://api.themoviedb.org/3/search/movie?api_key="+config.api_key+"&query="+title)
             title = result.json()['results'][0]['title']
             idx = df1.index[df1['title'] == title][0]
         except :
