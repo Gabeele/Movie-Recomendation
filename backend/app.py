@@ -23,9 +23,10 @@ def home():
 @cross_origin()
 def get_example():
     
-    movie = request.args.get("movie")
+    movie = request.args.get("movie")        
     results= engine.get_recommendation(movie)
-    
+    if(results == "No movies with that title"):
+         return jsonify({"movies":results}), 404
     return jsonify({"movies":results})
 
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False

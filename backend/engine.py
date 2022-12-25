@@ -5,7 +5,11 @@ df1 = pickle.load(open('./data/movie_list.pkl', 'rb'))
 tfidf_matrix = pickle.load(open('./data/tfidf_matrix.pkl', 'rb'))
 
 def get_recommendation(title):
-    idx = df1.index[df1['title'] == title][0]
+    try:
+        idx = df1.index[df1['title'] == title][0]
+    except:
+        return "No movies with that title"
+        
 
     # Get the pairwsie similarity scores of all movies with that movie
     sim_scores = list(enumerate(

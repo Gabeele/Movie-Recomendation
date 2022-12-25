@@ -6,10 +6,14 @@ export default function Search({setValue}) {
     async function  getMovies(){
         const search = searchRef.current.value
         if (search === '')
-        return (<p>Sad... No movies found :\ Try again with the specific name and check the spelling.</p>)
+        return 
         
         const response = await fetch('http://localhost/movies?movie='+search);
         const list = await response.json();
+        if(response.status === 404){
+            alert("Looks like no movies were found with that name :/\n Try again and double check the spelling.")
+            return 
+        }
         setValue(list)
     }
 
@@ -23,6 +27,7 @@ export default function Search({setValue}) {
           getMovies()
         }
       };
+
 
     return (
         <div className="search">
