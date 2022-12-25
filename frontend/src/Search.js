@@ -8,8 +8,8 @@ export default function Search({setValue}) {
         const search = searchRef.current.value
         if (search === '')
             return 
-
-        const response = await fetch('http://localhost/movies');
+        
+        const response = await fetch('http://localhost/movies?movie='+search);
         const list = await response.json();
         setValue(list)
 
