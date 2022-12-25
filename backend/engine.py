@@ -31,7 +31,7 @@ def get_recommendation(title):
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
     # Get the scores of the 10 most similar movies
-    sim_scores = sim_scores[1:5]
+    sim_scores = sim_scores[1:9]
 
     # Get the movie indices
     movie_indices = [i[0] for i in sim_scores]
