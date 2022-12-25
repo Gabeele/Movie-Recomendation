@@ -71,6 +71,7 @@ a, a:hover, a:focus{
 }
 
 .movie-card{
+    width: 510px;
     margin:2% 0;
     text-align: center;
     padding: 10px;
