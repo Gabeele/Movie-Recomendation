@@ -1,4 +1,13 @@
-Flask==0.12
-flask-restful==0.3.5
+Flask
+flask-restful
 gunicorn
 flask-cors
+pandas
+scikit-learn
+matplotlib
+scikit-image
+nltk
+seaborn
+streamlit
+numpy
+pickle5
