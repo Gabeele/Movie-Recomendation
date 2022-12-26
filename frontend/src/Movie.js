@@ -3,7 +3,7 @@ import React from "react"
 export default function Movie({ movie }) {
     return (
         <>
-            <a className="link" href={movie.url} target="_blank">
+            <a className="link" href={movie.url} target="_blank" rel="noreferrer noopener">
                 <h4 className="title">{movie.title}</h4>
 
                 <img className="poster" alt={movie.title} src={movie.poster_path}></img>

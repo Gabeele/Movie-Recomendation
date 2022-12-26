@@ -1,16 +1,25 @@
 
 
 
-:root{
+html, body{
     --background: #010918;
     --foreground: #010f2c; 
-    --light-font: rgb(255, 242, 215);
+    --light-font: rgb(250, 249, 246);
+    --sub-font: rgba(249, 249, 249, 0.80);
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #010918;
     color: var(--light-font);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+*{
+
+    transition: ease-in-out 0.2s;
 }
 
 a, a:hover, a:focus{
@@ -20,6 +29,25 @@ a, a:hover, a:focus{
     outline: none;
 }
 
+h1{
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+h4{
+
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: var(--sub-font);
+    
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
 .header{
     font-size: x-large;
@@ -85,9 +113,7 @@ a, a:hover, a:focus{
     transition: ease-in-out 0.2s;
 }
 
-
 .movie-card img{
-    margin: px;
     border: black 5px solid;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -104,3 +130,50 @@ a, a:hover, a:focus{
     margin: 0;
     font-size: medium;
 }
+
+.bottom {
+    position: relative;
+}
+
+.footer{
+    position:relative;
+    left:0;
+    bottom:0;
+    right:0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.footer a{
+    text-decoration: underline dotted;
+
+}
+
+@media screen and (max-width: 1124px) {
+    .search input{
+        width: 75%;
+    }
+ }
+
+ @media screen and (max-width: 600px) {
+    .movie-card{
+        width: 85%;
+    }
+
+    .movie-card img{
+        width: 90%;
+    }
+
+    @media screen and (max-width: 350px){
+        *{
+            font-size: mediums;
+            word-wrap: break-word;
+        }
+    }
+
+ }
