@@ -1,7 +1,7 @@
 # RecommendMeMovies.com ![Logo](https://user-images.githubusercontent.com/59030389/209724706-751d49ac-acff-4417-8f83-d99de56e0e4a.png) 
 
 ### Quick Overview
-A personal project to explore web development, machine learning, Docker, and Deployment. The website is deployed on a Digital Ocean server and can be accessed [recommendmemovies.com](recommendmemovies.com).
+A personal project to explore web development, machine learning, Docker, and Deployment. The website is deployed on a Digital Ocean server and can be accessed [recommendmemovies.com](https://recommendmemovies.com).
 Services like Nginx provides SSL certification on a single domain but split traffic onto two servers - the frontend and backend. The front end is created with ReactJS and NodeJS to display all UI elements and query the API backend. The backend is a Flask service built in Python, which takes the search movie and returns a list of suggested movies. The backend also runs the machine learning algorithm.
 
 ### Machine Learning
