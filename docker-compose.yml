@@ -7,7 +7,7 @@ services:
       - ./backend:/user/src/app
     restart: always
     ports: 
-      - 80:5000
+      - 5000:5000
 
   frontend:
     build: ./frontend
@@ -17,3 +17,18 @@ services:
       - 3000:3000
     depends_on:
         - backend
+
+  proxy:
+    image: 
+      nginx 
+    volumes: 
+      - ./proxy/nginx.config:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/live/recommendmemovies.com/fullchain.pem:/etc/fullchain.pem
+      - /etc/letsencrypt/live/recommendmemovies.com/privkey.pem:/etc/privkey.pem
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - NGINX_HOST=recommendmemovies.com
+      - NGINX_PORT= 3000
+      

@@ -1,7 +1,7 @@
 
 
 
-html, body{
+:root{
     --background: #010918;
     --foreground: #010f2c; 
     --light-font: rgb(250, 249, 246);
@@ -14,7 +14,7 @@ html, body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
     padding:0;
-    height:100%;
+    overflow-x: hidden;
 }
 
 *{
@@ -169,7 +169,7 @@ h4{
         width: 90%;
     }
 
-    @media screen and (max-width: 350px){
+    @media screen and (max-width: 375px){
         *{
             font-size: mediums;
             word-wrap: break-word;

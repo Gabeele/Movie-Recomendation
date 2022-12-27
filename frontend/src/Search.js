@@ -8,7 +8,7 @@ export default function Search({setValue}) {
         if (search === '')
         return 
         
-        const response = await fetch('http://localhost/movies?movie='+search);
+        const response = await fetch('https://recommendmemovies.com/api/movies?movie='+search);
         const list = await response.json();
         if(response.status === 404){
             alert("Looks like no movies were found with that name :/\n Try again and double check the spelling.")
