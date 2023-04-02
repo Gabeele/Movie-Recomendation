@@ -1,4 +1,6 @@
 # RecommendMeMovies.com ![Logo](https://user-images.githubusercontent.com/59030389/209724706-751d49ac-acff-4417-8f83-d99de56e0e4a.png) 
+[![Site Status](https://img.shields.io/badge/Github-Offline-red)](#)
+
 
 ### Quick Overview
 A personal project to explore web development, machine learning, Docker, and Deployment. The website is deployed on a Digital Ocean server and can be accessed [recommendmemovies.com](https://recommendmemovies.com).
